@@ -19,10 +19,10 @@
       "type": "documentDB",
       "name": "rentableCars",
       "databaseName": "CarRentals",
-      "collectionName": "rentable-cars",
+      "collectionName": "cars",
       "connection": "car-rental_DOCUMENTDB",
       "direction": "in",
-      "sqlQuery": "SELECT c.id, c.plate, c.location FROM c"
+      "sqlQuery": "SELECT c.id, c.plate, c.location FROM c WHERE c.status = 'rentable'"
     }
   ],
   "disabled": false
