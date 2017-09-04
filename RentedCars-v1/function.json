@@ -1,0 +1,29 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "route": "rented-cars",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    },
+    {
+      "type": "documentDB",
+      "name": "rentedCars",
+      "databaseName": "CarRentals",
+      "collectionName": "rented-cars",
+      "connection": "car-rental_DOCUMENTDB",
+      "direction": "in",
+      "sqlQuery": "SELECT c.id, c.plate, c.location FROM c"
+    }
+  ],
+  "disabled": false
+}
