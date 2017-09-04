@@ -5,7 +5,7 @@
       "type": "httpTrigger",
       "direction": "in",
       "name": "req",
-      "route": "available-cars",
+      "route": "rentable-cars",
       "methods": [
         "get"
       ]
@@ -17,9 +17,9 @@
     },
     {
       "type": "documentDB",
-      "name": "sourceAvailableCars",
+      "name": "rentableCars",
       "databaseName": "CarRentals",
-      "collectionName": "available-cars",
+      "collectionName": "rentable-cars",
       "connection": "car-rental_DOCUMENTDB",
       "direction": "in",
       "sqlQuery": "SELECT c.id, c.plate, c.location FROM c"
